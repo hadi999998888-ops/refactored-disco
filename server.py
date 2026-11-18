@@ -1,4 +1,8 @@
   def do_POST(self):
+    if path == '/de4/api/webhooks/github':
+    payload = self.read_json()
+    print('GitHub webhook:', payload)
+    return reply(self, 200, {'ok': True})
    path=urllib.parse.urlparse(self.path).path
    qs=urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query)
 
