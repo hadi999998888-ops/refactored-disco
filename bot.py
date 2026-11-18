@@ -158,4 +158,4 @@ def run_bot():
     app.add_handler(MessageHandler(filters.PHOTO,photo_step))
     app.add_handler(MessageHandler(filters.VIDEO,video_step))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND,text_steps))
-    app.run_polling(drop_pending_updates=True)
+    app.run_polling(drop_pending_updates=True, stop_signals=None)
